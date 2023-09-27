@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="anime.css" />
+    <title>アニメ</title>
+  </head>
+  <body>
+    <header>
+      <!-- <h1>アニメ</h1> -->
+    </header>
+    <!-- images -->
+    <div class="container-cards">
+      <div class="cards">
+        <div class="card">
+          <img
+            src="./assets/rin.webp"
+            alt="kagamine rin vocaloid"
+            class="main pt-2"
+          />
+          <div class="name" style="color: #f6d349">
+            Suggest <br />Anime
+            <button class="box-input btn" id="getAnime">Suggest</button>
+          </div>
+          <div class="bg" style="background-color: #f6d349"></div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/miku.png"
+            alt="hatsune miku vocaloid"
+            class="main"
+          />
+          <div class="name" style="color: #00caea">
+            Anime
+            <input
+              class="box-input"
+              type="text"
+              id="searchAnime"
+              placeholder="Enter title"
+            />
+          </div>
+          <div class="bg" style="background-color: #00caea"></div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/luka.webp"
+            alt="megurine luka vocaloid"
+            class="main pt-2"
+          />
+
+          <div class="name" style="color: #ffadbd">
+            Manga
+            <input
+              class="box-input"
+              type="text"
+              id="searchManga"
+              placeholder="Enter title"
+            />
+          </div>
+          <div class="bg" style="background-color: #ffadbd"></div>
+        </div>
+        <div class="card">
+          <img
+            src="./assets/teto.png"
+            alt="kasane teto vocaloid"
+            class="main"
+          />
+
+          <div class="name" style="color: #e14f5a">
+            Suggest<br />
+            Manga
+            <button class="box-input btn" id="getManga">Suggest</button>
+          </div>
+          <div class="bg" style="background-color: #e14f5a"></div>
+        </div>
+      </div>
+    </div>
+
+    <img class="loader" src="./assets/cat.webp" alt="cat spinner" />
+
+    <div id="result" class="container"></div>
+    <div id="characters" class="container"></div>
+
+    <div class="not-found">
+      <h2>Unfortunately no title was found for your query >◠( ཀ ヘ ཀ)◡&lt;</h2>
+      <img src="./assets/not-found.gif" alt="anime girl" />
+    </div>
+
+    <div id="more" class="container centered"></div>
+    <script src="anime.js"></script>
+  </body>
+</html>

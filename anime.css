@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:wght@100&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Caveat Brush", cursive;
+  margin: 0;
+}
+
+/* Header */
+header {
+  background-image: url("./assets/showcase.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+  height: 40vh;
+  margin-bottom: 2rem;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* buttons */
+button {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 32px !important;
+  padding: 13px 30px;
+}
+
+#getAnime {
+  background: #f6d349;
+}
+
+#getManga {
+  background: #e14f5a !important;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* series display */
+/* .series {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #0f5863;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.text {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.series-picture {
+  max-width: 100%; 
+  height: auto;  
+} */
+
+/* main cards */
+.box-input {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px;
+  padding: 15px 30px;
+  width: 170px;
+  font-family: "Caveat Brush", cursive;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-flow: row wrap;
+  gap: 4rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  border-radius: 2rem;
+  width: 20rem;
+  min-width: 15rem;
+  min-height: 15rem;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+}
+
+.card img {
+  width: 10rem;
+}
+
+.name {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 800;
+  top: 5rem;
+  line-height: 0.8;
+  transition: all 0.25s ease-in-out;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.25s ease-in-out;
+}
+.main {
+  position: absolute;
+  z-index: 999;
+  transform: translateX(2rem);
+  transition: all 0.25s ease-in-out;
+}
+
+.card:hover > .bg {
+  transform: scaleY(0);
+}
+.card:hover > .main {
+  transform: translateX(10rem);
+}
+.card:hover {
+  min-width: 20rem;
+}
+.card:hover > .name {
+  font-size: 4.2rem;
+  margin-top: -2rem;
+}
+
+/* small utilities */
+.pt-2 {
+  padding-top: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.ui-card {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.ui-card:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  transition: 1s;
+  transform: scale(1.01);
+}
+
+/* spinner and not found */
+
+.loader {
+  display: none;
+  margin: 2rem auto;
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+}
+
+.not-found {
+  background: linear-gradient(to bottom, #ff6b6b, #ffd166);
+  padding: 2rem;
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  display: none;
+}
+
+.not-found img {
+  display: block;
+  margin: auto;
+  border-radius: 50px;
+  margin: 5rem auto;
+}
+
+/* Result */
+
+#result {
+  align-items: center;
+  margin: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* series display */
+.series {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #0f5863;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.text {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.series-picture {
+  max-width: 100%;
+  height: auto;
+}
+
+/* recommendations */
+.recommendation {
+  display: flex;
+  align-items: center;
+}
+
+.recommendation-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.recommendation-description {
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin: auto 2rem;
+  padding: auto 2rem;
+  font-size: 2rem;
+}
+
+.recommendation-picture img {
+  width: 4rem;
+  border-radius: 15px;
+}
+
+/* Characters */
+#characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.character {
+  flex: 0 0 calc(33.33% - 10px);
+  padding: 20px;
+  text-align: center;
+}
+
+.small-picture img {
+  width: 4rem !important;
+  border-radius: 50px;
+  border: 1px solid #000;
+}
+
+.character-link a {
+  text-decoration: none;
+}
+
+.character-link a:hover {
+  color: rgb(3, 7, 17);
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  header {
+    height: 35vh;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    height: 25vh;
+  }
+
+  .character {
+    display: block;
+    margin: 2rem auto;
+  }
+
+  .not-found {
+    font-size: 1rem;
+  }
+  .not-found img {
+    width: 17rem;
+  }
+
+  .recommendation {
+    flex-direction: column;
+  }
+
+  .character {
+    flex: 0 0 calc(100%);
+  }
+}
